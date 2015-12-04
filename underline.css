@@ -1,0 +1,11 @@
+.test li{
+	list-style: none;
+}
+.test ul li a:link{
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+.test ul li:nth-child(1) a:link{
+	
+}
