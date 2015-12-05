@@ -1,11 +1,36 @@
 .test li{
 	list-style: none;
+	position:relative;
+	display:inline-block;
 }
 .test ul li a:link{
 	display: block;
 	text-decoration: none;
 	color: #000;
 }
-.test ul li:nth-child(1) a:link{
+.btn_underline:after{
+	position:absolute;
+	display:block;
+	height:5px;
+	background-color:black;
+	width:0px;
+	content:"";
+	-moz-transition:all 2s;
+}
+
+.underline_left:hover:after{
+width:100%;
+
+}
+
+.underline_middle:after{
+padding:0 50%;
+}
+
+.underline_middle:hover:after{
+	padding:0;
+	width:100%;
+}
+.underline_middle:hover{
 	
 }
