@@ -3,34 +3,40 @@
 	position:relative;
 	display:inline-block;
 }
-.test ul li a:link{
-	display: block;
-	text-decoration: none;
+
+/********** Mise en forme block encadrant *****************/
+.test ul li .btn_underline{
+	display:inline-block;
+		text-decoration: none;
 	color: #000;
 }
-.btn_underline:after{
-	position:absolute;
+/********** Mise en place div suivant le lien *****************/
+.btn_underline a:after{
 	display:block;
 	height:5px;
-	background-color:black;
 	width:0px;
+	background-color:black;
 	content:"";
 	-moz-transition:all 2s;
 }
-
-.underline_left:hover:after{
+	/********** Action soulignement par la gauche *****************/
+.underline_left a:hover:after{
 width:100%;
-
 }
 
-.underline_middle:after{
-padding:0 50%;
+/********** Modifs pour soulignement par le milieu *****************/
+.underline_middle a:after{
+display:block;
+margin:auto;
+}
+.underline_middle{	
+	text-align:center;
 }
 
-.underline_middle:hover:after{
-	padding:0;
+	/**********Action pour soulignement par le milieu *****************/
+.underline_middle a:hover:after{
 	width:100%;
 }
-.underline_middle:hover{
-	
-}
+/** A faire 
+***** Soulignement par la droite **********
+***** Vitesse de soulignement ***********/
