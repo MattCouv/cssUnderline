@@ -3,7 +3,9 @@
 	position:relative;
 	display:inline-block;
 }
-
+a:link{
+	text-decoration: none;
+}
 /********** Mise en forme block encadrant *****************/
 .test ul li .btn_underline{
 	display:inline-block;
@@ -17,6 +19,7 @@
 	width:0px;
 	background-color:black;
 	content:"";
+	-webkit-transition:all 2s;
 	-moz-transition:all 2s;
 }
 	/********** Action soulignement par la gauche *****************/
@@ -40,3 +43,96 @@ margin:auto;
 /** A faire 
 ***** Soulignement par la droite **********
 ***** Vitesse de soulignement ***********/
+/* bouton qui souligne SANS SPAN de gauche a droite*/
+.nav{
+	background: #ccc;
+	height: 27px;
+}
+.underline-ltr {
+  position: relative;
+  color: #ff3296;
+}
+.underline-ltr:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 10px;
+  background-color: #98004a;
+  content: "";
+  transition: width 1s;
+}
+.underline-ltr:hover {
+  color: #98004a;
+}
+.underline-ltr:hover:after {
+  width: 100%;
+}
+/* bouton qui souligne SANS SPAN de droite a gauche*/
+
+.underline-rtl {
+  position: relative;
+  color: #ff3296;
+}
+.underline-rtl:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 0;
+  height: 10px;
+  background-color: #98004a;
+  content: "";
+  transition: width 1s;
+}
+.underline-rtl:hover {
+  color: #98004a;
+}
+.underline-rtl:hover:after {
+  width: 100%;
+}
+/* bouton qui souligne SANS SPAN du bas vers le haut*/
+.underline-btt {
+  position: relative;
+  color: #ff3296;
+}
+.underline-btt:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 0;
+  background-color: #98004a;
+  content: "";
+  transition: height 1s;
+}
+.underline-btt:hover {
+  color: #98004a;
+}
+.underline-btt:hover:after {
+  height: 10px;
+}
+/* bouton qui souligne SANS SPAN du haut vers le bas*/
+.underline-ttb {
+  position: relative;
+  color: #ff3296;
+}
+.underline-ttb:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 17px;
+  width: 100%;
+  height: 0;
+  background-color: #98004a;
+  content: "";
+  transition: height 1s;
+}
+.underline-ttb:hover {
+  color: #98004a;
+}
+.underline-ttb:hover:after {
+  height: 10px;
+}
