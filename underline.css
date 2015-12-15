@@ -13,37 +13,35 @@ a:link{
 	color: #000;
 }
 /********** Mise en place div suivant le lien *****************/
-.btn_underline a:after{
+.btn_underline:after{
 	display:block;
 	height:5px;
 	width:0px;
 	background-color:black;
 	content:"";
-	-webkit-transition:all 2s;
+	-webkit-transition:all 0.2s;
 	-moz-transition:all 2s;
 }
 	/********** Action soulignement par la gauche *****************/
-.underline_left a:hover:after{
+.underline_left:hover:after{
 width:100%;
 }
 
 /********** Modifs pour soulignement par le milieu *****************/
-.underline_middle a:after{
+.underline_middle:after{
 display:block;
 margin:auto;
 }
-.underline_middle{	
-	text-align:center;
-}
+
 
 	/**********Action pour soulignement par le milieu *****************/
-.underline_middle a:hover:after{
+.underline_middle:hover:after{
 	width:100%;
 }
-/** A faire 
+/** A faire
 ***** Soulignement par la droite **********
 ***** Vitesse de soulignement ***********/
-/* bouton qui souligne SANS SPAN de gauche a droite*/
+/* bouton qui souligne de gauche a droite*/
 .nav{
 	background: #ccc;
 	height: 60px;
@@ -65,12 +63,12 @@ margin:auto;
   transition: width 0.2s;
 }
 .underline-ltr:hover {
-  font-weight:bold;
+  color: #FFC715;
 }
 .underline-ltr:hover:after {
   width: 100%;
 }
-/* bouton qui souligne SANS SPAN de droite a gauche*/
+/* bouton qui souligne de droite a gauche*/
 
 .underline-rtl {
   position: relative;
@@ -93,7 +91,7 @@ margin:auto;
 .underline-rtl:hover:after {
   width: 100%;
 }
-/* bouton qui souligne SANS SPAN du bas vers le haut*/
+/* bouton qui souligne du bas vers le haut*/
 .underline-btt {
   position: relative;
   color: #000;
@@ -115,7 +113,7 @@ margin:auto;
 .underline-btt:hover:after {
   height: 10px;
 }
-/* bouton qui souligne SANS SPAN du haut vers le bas*/
+/* bouton qui souligne du haut vers le bas*/
 .underline-ttb {
   position: relative;
   color: #000;
